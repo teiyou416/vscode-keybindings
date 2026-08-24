@@ -1,0 +1,355 @@
+{
+    "window.density.editorTabHeight": "default" ,
+   // "workbench.activityBar.iconSize": 34,
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "workbench.colorTheme": "Quiet Light",
+    "workbench.editor.enablePreview": false,
+    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.showContextMenu": true,
+    "latex-workshop.intellisense.package.enabled": true,
+    "latex-workshop.message.error.show": false,
+    "latex-workshop.message.warning.show": false,
+    "latex-workshop.latex.outDir": "out",
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-output-directory=%OUTDIR%",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-output-directory=%OUTDIR%",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-outdir=out",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%OUTDIR%/%DOCFILE%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "XeLaTeX",
+            "tools": [
+                "xelatex"
+            ]
+        },
+        {
+            "name": "PDFLaTeX",
+            "tools": [
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "BibTeX",
+            "tools": [
+                "bibtex"
+            ]
+        },
+        {
+            "name": "LaTeXmk",
+            "tools": [
+                "latexmk"
+            ]
+        },
+        {
+            "name": "xelatex -> bibtex -> xelatex*2",
+            "tools": [
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
+        },
+        {
+            "name": "pdflatex -> bibtex -> pdflatex*2",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.bcf",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.fls",
+        "*.fdb_latexmk",
+        "*.nav",
+        "*.snm",
+        "*.synctex.gz",
+        "*.vrb",
+        "*.xdv",
+        "*.run.xml"
+    ],
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.clean.subfolder.enabled": true,
+    "latex-workshop.latex.recipe.default": "LaTeXmk",
+    "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+    "terminal.integrated.profiles.osx": {
+        "zsh": {
+            "path": "/bin/zsh",
+            "args": [
+                "-l"
+            ],
+            "icon": "terminal-zsh"
+        }
+    },
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "gitlens.ai.model": "vscode",
+    "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        },
+        {
+            "before": ["<C-space>"],
+            "commands": ["editor.action.triggerSuggest"]
+        },
+        {
+            "before": ["<C-o>"],
+            "commands": ["editor.action.triggerSuggest"]
+        },
+        {
+            "before": ["<C-e>"],
+            "commands": ["jumpToNextSnippetPlaceholder"]
+        },
+        {
+            "before": ["<C-n>"],
+            "commands": ["jumpToPrevSnippetPlaceholder"]
+        }
+    ],
+    "vim.leader": "<space>",
+    "vim.timeout": 250,
+    "vim.useSystemClipboard": true,
+    "vim.hlsearch": true,
+    "vim.incsearch": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>", "f", "f"],
+            "commands": ["workbench.action.quickOpen"]
+        },
+        {
+            "before": ["<leader>", "f", "g"],
+            "commands": ["workbench.action.findInFiles"]
+        },
+        {
+            "before": ["<leader>", "f", "r"],
+            "commands": ["workbench.action.openRecent"]
+        },
+        {
+            "before": ["<leader>", "h"],
+            "commands": ["editor.action.showHover"]
+        },
+        {
+            "before": ["<leader>", "d"],
+            "commands": ["workbench.actions.view.problems"]
+        },
+        {
+            "before": ["<leader>", "-"],
+            "commands": ["editor.action.marker.prev"]
+        },
+        {
+            "before": ["<leader>", "="],
+            "commands": ["editor.action.marker.next"]
+        },
+        {
+            "before": ["g", "d"],
+            "commands": ["editor.action.revealDefinition"]
+        },
+        {
+            "before": ["g", "D"],
+            "commands": ["editor.action.revealDefinitionAside"]
+        },
+        {
+            "before": ["g", "y"],
+            "commands": ["editor.action.goToTypeDefinition"]
+        },
+        {
+            "before": ["g", "r"],
+            "commands": ["editor.action.goToReferences"]
+        },
+        {
+            "before": ["<leader>", "r", "n"],
+            "commands": ["editor.action.rename"]
+        },
+        {
+            "before": ["<leader>", "e"],
+            "commands": ["workbench.view.explorer"]
+        },
+        {
+            "before": ["<leader>", "n"],
+            "commands": ["workbench.view.explorer"]
+        },
+        {
+            "before": ["<leader>", "a"],
+            "commands": ["editor.action.quickFix"]
+        },
+        {
+            "before": ["<leader>", "t", "s"],
+            "commands": ["workbench.action.tasks.runTask"]
+        },
+        {
+            "before": ["g", "o"],
+            "commands": ["outline.focus"]
+        },
+        {
+            "before": ["g", "c", "c"],
+            "commands": ["editor.action.commentLine"]
+        },
+        {
+            "before": ["<leader>", "v", "c"],
+            "commands": ["workbench.action.debug.continue"]
+        },
+        {
+            "before": ["<leader>", "v", "r"],
+            "commands": ["workbench.action.debug.restart"]
+        },
+        {
+            "before": ["<leader>", "v", "p"],
+            "commands": ["workbench.action.debug.pause"]
+        },
+        {
+            "before": ["<leader>", "v", "x"],
+            "commands": ["workbench.action.debug.stop"]
+        },
+        {
+            "before": ["<leader>", "v", "b"],
+            "commands": ["editor.debug.action.toggleBreakpoint"]
+        },
+        {
+            "before": ["<leader>", "v", "B"],
+            "commands": ["editor.debug.action.conditionalBreakpoint"]
+        },
+        {
+            "before": ["<leader>", "v", "f"],
+            "commands": ["workbench.debug.viewlet.action.addFunctionBreakpoint"]
+        },
+        {
+            "before": ["<leader>", "v", "o"],
+            "commands": ["workbench.action.debug.stepOver"]
+        },
+        {
+            "before": ["<leader>", "v", "i"],
+            "commands": ["workbench.action.debug.stepInto"]
+        },
+        {
+            "before": ["<leader>", "v", "O"],
+            "commands": ["workbench.action.debug.stepOut"]
+        },
+        {
+            "before": ["<leader>", "v", "u"],
+            "commands": ["editor.debug.action.runToCursor"]
+        },
+        {
+            "before": [
+                "<leader>",
+                "l",
+                "t"
+            ],
+            "commands": [
+                "leetcode.testSolution"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "l",
+                "s"
+            ],
+            "commands": [
+                "leetcode.submitSolution"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["g", "c", "c"],
+            "commands": ["editor.action.commentLine"]
+        },
+        {
+            "before": ["<leader>", "a"],
+            "commands": ["editor.action.quickFix"]
+        }
+    ],
+    "explorer.confirmDelete": false,
+    "chat.viewSessions.orientation": "stacked",
+    "leetcode.nodePath": "/Users/teiyou/.nvm/versions/node/v24.15.0/bin/node",
+    "leetcode.endpoint": "leetcode",
+    "leetcode-problem-rating.workspaceFolder": "/Users/teiyou/.lcpr",
+    "leetcode.defaultLanguage": "golang",
+    "editor.fontSize": 15,
+    "leetcode.workspaceFolder": "/Users/teiyou/.leetcode",
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "go": true
+    },
+    "multiCommand.commands": [
+        {
+            "command": "multiCommand.openSelectedInSplitDown",
+            "sequence": [
+                "explorer.openToSide",
+                "workbench.action.moveEditorToBelowGroup"
+            ]
+        },
+        {
+            "command": "multiCommand.openSelectedInSplitRight",
+            "sequence": [
+                "explorer.openToSide"
+            ]
+        }
+    ],
+    "markdown.preview.lineHeight": 2,
+    "markdown.preview.fontSize": 15
+}

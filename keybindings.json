@@ -1,0 +1,82 @@
+// 将键绑定放在此文件中以覆盖默认值
+[
+    // NERDTree / Explorer
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "workbench.action.showCommands",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
+    },
+    {
+        "key": "escape",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "filesExplorerFocus"
+    },
+
+    // Vim window navigation. Ctrl+Arrow may be captured by macOS Mission Control,
+    // so Ctrl+h/j/k/l are provided as reliable alternatives.
+    {
+        "key": "ctrl+left",
+        "command": "workbench.action.focusLeftGroup"
+    },
+    {
+        "key": "ctrl+down",
+        "command": "workbench.action.focusBelowGroup"
+    },
+    {
+        "key": "ctrl+up",
+        "command": "workbench.action.focusAboveGroup"
+    },
+    {
+        "key": "ctrl+right",
+        "command": "workbench.action.focusRightGroup"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.focusLeftGroup",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.focusBelowGroup",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.focusAboveGroup",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.focusRightGroup",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
+    },
+
+    // Airline buffer navigation on macOS
+    {
+        "key": "alt+j",
+        "command": "workbench.action.previousEditor",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
+    },
+    {
+        "key": "alt+k",
+        "command": "workbench.action.nextEditor",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
+    },
+    {
+        "key": "alt+q",
+        "command": "workbench.action.closeActiveEditor",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
+    },
+
+    // ALE's F5 equivalent: show VS Code diagnostics
+    {
+        "key": "f5",
+        "command": "workbench.actions.view.problems",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
+    }
+]
