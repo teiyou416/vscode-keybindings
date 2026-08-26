@@ -7,6 +7,11 @@
         "when": "editorTextFocus && vim.mode == 'Normal'"
     },
     {
+        "key": "ctrl+n",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "filesExplorerFocus"
+    },
+    {
         "key": "ctrl+c",
         "command": "workbench.action.showCommands",
         "when": "editorTextFocus && vim.mode == 'Normal'"
@@ -16,24 +21,48 @@
         "command": "workbench.action.focusActiveEditorGroup",
         "when": "filesExplorerFocus"
     },
+    {
+        "key": "j",
+        "command": "list.focusDown",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "k",
+        "command": "list.focusUp",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "h",
+        "command": "list.collapse",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "l",
+        "command": "list.expand",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
 
     // Vim window navigation. Ctrl+Arrow may be captured by macOS Mission Control,
     // so Ctrl+h/j/k/l are provided as reliable alternatives.
     {
         "key": "ctrl+left",
-        "command": "workbench.action.focusLeftGroup"
+        "command": "workbench.action.focusLeftGroup",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
     },
     {
         "key": "ctrl+down",
-        "command": "workbench.action.focusBelowGroup"
+        "command": "workbench.action.focusBelowGroup",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
     },
     {
         "key": "ctrl+up",
-        "command": "workbench.action.focusAboveGroup"
+        "command": "workbench.action.focusAboveGroup",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
     },
     {
         "key": "ctrl+right",
-        "command": "workbench.action.focusRightGroup"
+        "command": "workbench.action.focusRightGroup",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
     },
     {
         "key": "ctrl+h",

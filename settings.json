@@ -4,6 +4,13 @@
     "github.copilot.nextEditSuggestions.enabled": true,
     "workbench.colorTheme": "Quiet Light",
     "workbench.editor.enablePreview": false,
+    "workbench.editor.openSideBySideDirection": "down",
+    "editor.lineNumbers": "on",
+    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingQuotes": "always",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": true,
+    "editor.guides.indentation": true,
     "latex-workshop.latex.autoBuild.run": "never",
     "latex-workshop.showContextMenu": true,
     "latex-workshop.intellisense.package.enabled": true,
@@ -163,6 +170,10 @@
             "commands": ["jumpToNextSnippetPlaceholder"]
         },
         {
+            "before": ["<C-l>"],
+            "commands": ["jumpToNextSnippetPlaceholder"]
+        },
+        {
             "before": ["<C-n>"],
             "commands": ["jumpToPrevSnippetPlaceholder"]
         }
@@ -223,14 +234,18 @@
         },
         {
             "before": ["<leader>", "e"],
-            "commands": ["workbench.view.explorer"]
+            "commands": ["workbench.files.action.focusFilesExplorer"]
         },
         {
             "before": ["<leader>", "n"],
-            "commands": ["workbench.view.explorer"]
+            "commands": ["workbench.files.action.focusFilesExplorer"]
         },
         {
             "before": ["<leader>", "a"],
+            "commands": ["editor.action.quickFix"]
+        },
+        {
+            "before": ["<leader>", "a", "w"],
             "commands": ["editor.action.quickFix"]
         },
         {
